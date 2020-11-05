@@ -12,7 +12,7 @@ android.telecom.TelecomManager.handleMmi(java.lang.String,android.telecom.PhoneA
 android.telecom.TelecomManager.getAdnUriForPhoneAccount(android.telecom.PhoneAccountHandle)android.net.Uri :: android.permission.MODIFY_PHONE_STATE
 android.telecom.TelecomManager.cancelMissedCallsNotification()void :: android.permission.MODIFY_PHONE_STATE
 android.telecom.TelecomManager.showInCallScreen(boolean)void :: android.permission.READ_PHONE_STATE
-android.telecom.TelecomManager.placeCall(android.telecom.Uri,android.telecom.Bundle)void :: android.permission.CALL_PHONE
+android.telecom.TelecomManager.placeCall(android.net.Uri,android.os.Bundle)void :: android.permission.CALL_PHONE
 com.android.internal.widget.LockPatternUtils.requireCredentialEntry(int)void :: android.permission.ACCESS_KEYGUARD_SECURE_STORAGE
 com.android.internal.widget.LockPatternUtils.requireStrongAuth(int,int)void :: android.permission.ACCESS_KEYGUARD_SECURE_STORAGE
 android.content.ContentResolver.getSyncAutomatically(android.accounts.Account,java.lang.String)boolean :: android.permission.READ_SYNC_SETTINGS
@@ -41,7 +41,7 @@ android.content.Context.getObbDirs()java.io.File[] :: android.permission.WRITE_E
 android.content.Context.getExternalCacheDir()java.io.File :: android.permission.WRITE_EXTERNAL_STORAGE, android.permission.READ_EXTERNAL_STORAGE
 android.content.Context.getExternalCacheDirs()java.io.File[] :: android.permission.WRITE_EXTERNAL_STORAGE
 android.content.Context.getExternalMediaDirs()java.io.File[] :: android.permission.WRITE_EXTERNAL_STORAGE
-android.content.Context.setWallpaper(android.content.Bitmap)void :: android.permission.SET_WALLPAPER
+android.content.Context.setWallpaper(android.graphics.Bitmap)void :: android.permission.SET_WALLPAPER
 android.content.Context.setWallpaper(java.io.InputStream)void :: android.permission.SET_WALLPAPER
 android.content.Context.clearWallpaper()void :: android.permission.SET_WALLPAPER
 android.content.Context.sendStickyBroadcast(android.content.Intent)void :: android.permission.BROADCAST_STICKY
@@ -98,9 +98,9 @@ android.net.TrafficStats.setThreadStatsUid(int)void :: android.permission.UPDATE
 android.os.health.SystemHealthManager.takeUidSnapshot(int)android.os.health.HealthStats :: android.permission.BATTERY_STATS
 android.os.health.SystemHealthManager.takeUidSnapshots(int[])android.os.health.HealthStats[] :: android.permission.BATTERY_STATS
 android.os.Vibrator.vibrate(long)void :: android.permission.VIBRATE
-android.os.Vibrator.vibrate(long,android.os.AudioAttributes)void :: android.permission.VIBRATE
+android.os.Vibrator.vibrate(long,android.media.AudioAttributes)void :: android.permission.VIBRATE
 android.os.Vibrator.vibrate(long[],int)void :: android.permission.VIBRATE
-android.os.Vibrator.vibrate(long[],int,android.os.AudioAttributes)void :: android.permission.VIBRATE
+android.os.Vibrator.vibrate(long[],int,android.media.AudioAttributes)void :: android.permission.VIBRATE
 android.os.Vibrator.cancel()void :: android.permission.VIBRATE
 android.os.storage.VolumeInfo.getInternalPathForUser(int)java.io.File :: android.permission.WRITE_MEDIA_STORAGE
 android.os.storage.StorageVolume.createAccessIntent(java.lang.String)android.content.Intent :: android.permission.READ_EXTERNAL_STORAGE, android.permission.WRITE_EXTERNAL_STORAGE
@@ -310,10 +310,10 @@ android.app.ActivityManager.forceStopPackageAsUser(java.lang.String,int)void :: 
 android.app.ActivityManager.handleIncomingUser(int,int,int,boolean,boolean,java.lang.String,java.lang.String)int :: android.permission.INTERACT_ACROSS_USERS_FULL, android.permission.INTERACT_ACROSS_USERS
 android.app.ActivityManager.dumpPackageState(java.io.FileDescriptor,java.lang.String)void :: android.permission.DUMP
 android.app.WallpaperManager.setResource(int)void :: android.permission.SET_WALLPAPER
-android.app.WallpaperManager.setBitmap(android.app.Bitmap)void :: android.permission.SET_WALLPAPER
-android.app.WallpaperManager.setBitmap(android.app.Bitmap,android.app.Rect,boolean)int :: android.permission.SET_WALLPAPER
+android.app.WallpaperManager.setBitmap(android.graphics.Bitmap)void :: android.permission.SET_WALLPAPER
+android.app.WallpaperManager.setBitmap(android.graphics.Bitmap,android.graphics.Rect,boolean)int :: android.permission.SET_WALLPAPER
 android.app.WallpaperManager.setStream(java.io.InputStream)void :: android.permission.SET_WALLPAPER
-android.app.WallpaperManager.setStream(java.io.InputStream,android.app.Rect,boolean)int :: android.permission.SET_WALLPAPER
+android.app.WallpaperManager.setStream(java.io.InputStream,android.graphics.Rect,boolean)int :: android.permission.SET_WALLPAPER
 android.app.WallpaperManager.suggestDesiredDimensions(int,int)void :: android.permission.SET_WALLPAPER_HINTS
 android.app.WallpaperManager.clear()void :: android.permission.SET_WALLPAPER
 android.app.job.JobInfo$Builder.setPersisted(boolean)android.app.job.JobInfo.Builder :: android.permission.RECEIVE_BOOT_COMPLETED
@@ -454,25 +454,25 @@ android.telephony.TelephonyManager.setNetworkSelectionModeAutomatic(int)void :: 
 android.telephony.TelephonyManager.getCellNetworkScanResults(int)com.android.internal.telephony.CellNetworkScanResult :: android.permission.MODIFY_PHONE_STATE
 android.telephony.TelephonyManager.setNetworkSelectionModeManual(int,com.android.internal.telephony.OperatorInfo,boolean)boolean :: android.permission.MODIFY_PHONE_STATE
 android.telephony.TelephonyManager.setPreferredNetworkType(int,int)boolean :: android.permission.MODIFY_PHONE_STATE
-android.location.LocationRequest.setWorkSource(android.location.WorkSource)void :: android.permission.UPDATE_DEVICE_STATS
+android.location.LocationRequest.setWorkSource(android.os.WorkSource)void :: android.permission.UPDATE_DEVICE_STATS
 android.location.LocationRequest.setHideFromAppOps(boolean)void :: android.permission.UPDATE_APP_OPS_STATS
-android.location.LocationManager.addProximityAlert(double,double,float,long,android.location.PendingIntent)void :: android.permission.ACCESS_FINE_LOCATION, android.permission.ACCESS_COARSE_LOCATION
-android.location.LocationManager.addGeofence(android.location.LocationRequest,android.location.Geofence,android.location.PendingIntent)void :: android.permission.ACCESS_FINE_LOCATION
-android.location.LocationManager.removeProximityAlert(android.location.PendingIntent)void :: android.permission.ACCESS_FINE_LOCATION, android.permission.ACCESS_COARSE_LOCATION
-android.location.LocationManager.removeGeofence(android.location.Geofence,android.location.PendingIntent)void :: android.permission.ACCESS_FINE_LOCATION
-android.location.LocationManager.removeAllGeofences(android.location.PendingIntent)void :: android.permission.ACCESS_FINE_LOCATION
+android.location.LocationManager.addProximityAlert(double,double,float,long,android.app.PendingIntent)void :: android.permission.ACCESS_FINE_LOCATION, android.permission.ACCESS_COARSE_LOCATION
+android.location.LocationManager.addGeofence(android.location.LocationRequest,android.location.Geofence,android.app.PendingIntent)void :: android.permission.ACCESS_FINE_LOCATION
+android.location.LocationManager.removeProximityAlert(android.app.PendingIntent)void :: android.permission.ACCESS_FINE_LOCATION, android.permission.ACCESS_COARSE_LOCATION
+android.location.LocationManager.removeGeofence(android.location.Geofence,android.app.PendingIntent)void :: android.permission.ACCESS_FINE_LOCATION
+android.location.LocationManager.removeAllGeofences(android.app.PendingIntent)void :: android.permission.ACCESS_FINE_LOCATION
 com.android.nfc_extras.NfcExecutionEnvironment.open()void :: android.permission.WRITE_SECURE_SETTINGS
 com.android.nfc_extras.NfcExecutionEnvironment.close()void :: android.permission.WRITE_SECURE_SETTINGS
 com.android.nfc_extras.NfcExecutionEnvironment.transceive(byte[])byte[] :: android.permission.WRITE_SECURE_SETTINGS
-com.android.nfc_extras.NfcAdapterExtras.get(com.android.nfc_extras.NfcAdapter)com.android.nfc_extras.NfcAdapterExtras :: android.permission.WRITE_SECURE_SETTINGS
+com.android.nfc_extras.NfcAdapterExtras.get(android.nfc.NfcAdapter)com.android.nfc_extras.NfcAdapterExtras :: android.permission.WRITE_SECURE_SETTINGS
 com.android.nfc_extras.NfcAdapterExtras.getCardEmulationRoute()com.android.nfc_extras.NfcAdapterExtras.CardEmulationRoute :: android.permission.WRITE_SECURE_SETTINGS
 com.android.nfc_extras.NfcAdapterExtras.setCardEmulationRoute(com.android.nfc_extras.NfcAdapterExtras$CardEmulationRoute)void :: android.permission.WRITE_SECURE_SETTINGS
 com.android.nfc_extras.NfcAdapterExtras.getEmbeddedExecutionEnvironment()com.android.nfc_extras.NfcExecutionEnvironment :: android.permission.WRITE_SECURE_SETTINGS
 android.media.RingtoneManager.getCursor()com.android.internal.database.SortCursor :: android.permission.READ_EXTERNAL_STORAGE
-android.media.RingtoneManager.getValidRingtoneUri(android.media.Context)android.net.Uri :: android.permission.READ_EXTERNAL_STORAGE
-android.media.RingtoneManager.openRingtone(android.media.Context,android.media.Uri)java.io.InputStream :: android.permission.READ_EXTERNAL_STORAGE
-android.media.MediaPlayer.setWakeMode(android.media.Context,int)void :: android.permission.WAKE_LOCK
+android.media.RingtoneManager.getValidRingtoneUri(android.content.Context)android.net.Uri :: android.permission.READ_EXTERNAL_STORAGE
+android.media.RingtoneManager.openRingtone(android.content.Context,android.net.Uri)java.io.InputStream :: android.permission.READ_EXTERNAL_STORAGE
+android.media.MediaPlayer.setWakeMode(android.content.Context,int)void :: android.permission.WAKE_LOCK
 android.media.AudioManager.startBluetoothSco()void :: android.permission.MODIFY_AUDIO_SETTINGS
 android.media.AudioManager.startBluetoothScoVirtualCall()void :: android.permission.MODIFY_AUDIO_SETTINGS
 android.media.AudioManager.registerAudioPolicy(android.media.audiopolicy.AudioPolicy)int :: android.permission.MODIFY_AUDIO_ROUTING
-android.media.session.MediaSessionManager.getActiveSessionsForUser(android.media.session.ComponentName,int)java.util.List<android.media.session.MediaController> :: android.permission.INTERACT_ACROSS_USERS_FULL
+android.media.session.MediaSessionManager.getActiveSessionsForUser(android.content.ComponentName,int)java.util.List<android.media.session.MediaController> :: android.permission.INTERACT_ACROSS_USERS_FULL

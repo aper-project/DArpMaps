@@ -10,7 +10,7 @@ android.telecom.TelecomManager.handleMmi(java.lang.String,android.telecom.PhoneA
 android.telecom.TelecomManager.getAdnUriForPhoneAccount(android.telecom.PhoneAccountHandle)android.net.Uri :: android.permission.MODIFY_PHONE_STATE
 android.telecom.TelecomManager.cancelMissedCallsNotification()void :: android.permission.MODIFY_PHONE_STATE
 android.telecom.TelecomManager.showInCallScreen(boolean)void :: android.permission.READ_PHONE_STATE
-android.telecom.TelecomManager.placeCall(android.telecom.Uri,android.telecom.Bundle)void :: android.permission.CALL_PHONE
+android.telecom.TelecomManager.placeCall(android.net.Uri,android.os.Bundle)void :: android.permission.CALL_PHONE
 android.telecom.TelecomManager.dumpAnalytics()java.util.List<android.telecom.ParcelableCallAnalytics> :: android.permission.DUMP
 android.content.pm.PackageManager.getPackageInfoAsUser(java.lang.String,int,int)android.content.pm.PackageInfo :: android.permission.INTERACT_ACROSS_USERS
 android.content.pm.PackageManager.getEphemeralApplications()java.util.List<android.content.pm.EphemeralApplicationInfo> :: android.permission.ACCESS_EPHEMERAL_APPS
@@ -89,31 +89,31 @@ android.app.ActivityManager.killUid(int,java.lang.String)void :: android.permiss
 android.app.trust.TrustManager.setDeviceLockedForUser(int,boolean)void :: android.permission.ACCESS_KEYGUARD_SECURE_STORAGE
 android.app.trust.TrustManager.isTrustUsuallyManaged(int)boolean :: android.permission.TRUST_LISTENER
 android.location.LocationManager.requestLocationUpdates(java.lang.String,long,float,android.location.LocationListener)void :: android.permission.ACCESS_COARSE_LOCATION, android.permission.ACCESS_FINE_LOCATION :: anyOf
-android.location.LocationManager.requestLocationUpdates(java.lang.String,long,float,android.location.LocationListener,android.location.Looper)void :: android.permission.ACCESS_COARSE_LOCATION, android.permission.ACCESS_FINE_LOCATION :: anyOf
-android.location.LocationManager.requestLocationUpdates(long,float,android.location.Criteria,android.location.LocationListener,android.location.Looper)void :: android.permission.ACCESS_COARSE_LOCATION, android.permission.ACCESS_FINE_LOCATION :: anyOf
-android.location.LocationManager.requestLocationUpdates(java.lang.String,long,float,android.location.PendingIntent)void :: android.permission.ACCESS_COARSE_LOCATION, android.permission.ACCESS_FINE_LOCATION :: anyOf
-android.location.LocationManager.requestLocationUpdates(long,float,android.location.Criteria,android.location.PendingIntent)void :: android.permission.ACCESS_COARSE_LOCATION, android.permission.ACCESS_FINE_LOCATION :: anyOf
-android.location.LocationManager.requestSingleUpdate(java.lang.String,android.location.LocationListener,android.location.Looper)void :: android.permission.ACCESS_COARSE_LOCATION, android.permission.ACCESS_FINE_LOCATION :: anyOf
-android.location.LocationManager.requestSingleUpdate(android.location.Criteria,android.location.LocationListener,android.location.Looper)void :: android.permission.ACCESS_COARSE_LOCATION, android.permission.ACCESS_FINE_LOCATION :: anyOf
-android.location.LocationManager.requestSingleUpdate(java.lang.String,android.location.PendingIntent)void :: android.permission.ACCESS_COARSE_LOCATION, android.permission.ACCESS_FINE_LOCATION :: anyOf
-android.location.LocationManager.requestSingleUpdate(android.location.Criteria,android.location.PendingIntent)void :: android.permission.ACCESS_COARSE_LOCATION, android.permission.ACCESS_FINE_LOCATION :: anyOf
-android.location.LocationManager.addProximityAlert(double,double,float,long,android.location.PendingIntent)void :: android.permission.ACCESS_COARSE_LOCATION, android.permission.ACCESS_FINE_LOCATION :: anyOf
-android.location.LocationManager.addGeofence(android.location.LocationRequest,android.location.Geofence,android.location.PendingIntent)void :: android.permission.ACCESS_COARSE_LOCATION, android.permission.ACCESS_FINE_LOCATION :: anyOf
+android.location.LocationManager.requestLocationUpdates(java.lang.String,long,float,android.location.LocationListener,android.os.Looper)void :: android.permission.ACCESS_COARSE_LOCATION, android.permission.ACCESS_FINE_LOCATION :: anyOf
+android.location.LocationManager.requestLocationUpdates(long,float,android.location.Criteria,android.location.LocationListener,android.os.Looper)void :: android.permission.ACCESS_COARSE_LOCATION, android.permission.ACCESS_FINE_LOCATION :: anyOf
+android.location.LocationManager.requestLocationUpdates(java.lang.String,long,float,android.app.PendingIntent)void :: android.permission.ACCESS_COARSE_LOCATION, android.permission.ACCESS_FINE_LOCATION :: anyOf
+android.location.LocationManager.requestLocationUpdates(long,float,android.location.Criteria,android.app.PendingIntent)void :: android.permission.ACCESS_COARSE_LOCATION, android.permission.ACCESS_FINE_LOCATION :: anyOf
+android.location.LocationManager.requestSingleUpdate(java.lang.String,android.location.LocationListener,android.os.Looper)void :: android.permission.ACCESS_COARSE_LOCATION, android.permission.ACCESS_FINE_LOCATION :: anyOf
+android.location.LocationManager.requestSingleUpdate(android.location.Criteria,android.location.LocationListener,android.os.Looper)void :: android.permission.ACCESS_COARSE_LOCATION, android.permission.ACCESS_FINE_LOCATION :: anyOf
+android.location.LocationManager.requestSingleUpdate(java.lang.String,android.app.PendingIntent)void :: android.permission.ACCESS_COARSE_LOCATION, android.permission.ACCESS_FINE_LOCATION :: anyOf
+android.location.LocationManager.requestSingleUpdate(android.location.Criteria,android.app.PendingIntent)void :: android.permission.ACCESS_COARSE_LOCATION, android.permission.ACCESS_FINE_LOCATION :: anyOf
+android.location.LocationManager.addProximityAlert(double,double,float,long,android.app.PendingIntent)void :: android.permission.ACCESS_COARSE_LOCATION, android.permission.ACCESS_FINE_LOCATION :: anyOf
+android.location.LocationManager.addGeofence(android.location.LocationRequest,android.location.Geofence,android.app.PendingIntent)void :: android.permission.ACCESS_COARSE_LOCATION, android.permission.ACCESS_FINE_LOCATION :: anyOf
 android.location.LocationManager.getLastKnownLocation(java.lang.String)android.location.Location :: android.permission.ACCESS_COARSE_LOCATION, android.permission.ACCESS_FINE_LOCATION :: anyOf
 android.location.LocationManager.addGpsStatusListener(android.location.GpsStatus$Listener)boolean :: android.permission.ACCESS_FINE_LOCATION
 android.location.LocationManager.registerGnssStatusCallback(android.location.GnssStatusCallback)boolean :: android.permission.ACCESS_FINE_LOCATION
-android.location.LocationManager.registerGnssStatusCallback(android.location.GnssStatusCallback,android.location.Handler)boolean :: android.permission.ACCESS_FINE_LOCATION
+android.location.LocationManager.registerGnssStatusCallback(android.location.GnssStatusCallback,android.os.Handler)boolean :: android.permission.ACCESS_FINE_LOCATION
 android.location.LocationManager.registerGnssStatusCallback(android.location.GnssStatus$Callback)boolean :: android.permission.ACCESS_FINE_LOCATION
-android.location.LocationManager.registerGnssStatusCallback(android.location.GnssStatus$Callback,android.location.Handler)boolean :: android.permission.ACCESS_FINE_LOCATION
+android.location.LocationManager.registerGnssStatusCallback(android.location.GnssStatus$Callback,android.os.Handler)boolean :: android.permission.ACCESS_FINE_LOCATION
 android.location.LocationManager.addNmeaListener(android.location.GpsStatus$NmeaListener)boolean :: android.permission.ACCESS_FINE_LOCATION
 android.location.LocationManager.addNmeaListener(android.location.GnssNmeaListener)boolean :: android.permission.ACCESS_FINE_LOCATION
-android.location.LocationManager.addNmeaListener(android.location.GnssNmeaListener,android.location.Handler)boolean :: android.permission.ACCESS_FINE_LOCATION
+android.location.LocationManager.addNmeaListener(android.location.GnssNmeaListener,android.os.Handler)boolean :: android.permission.ACCESS_FINE_LOCATION
 android.location.LocationManager.addNmeaListener(android.location.OnNmeaMessageListener)boolean :: android.permission.ACCESS_FINE_LOCATION
-android.location.LocationManager.addNmeaListener(android.location.OnNmeaMessageListener,android.location.Handler)boolean :: android.permission.ACCESS_FINE_LOCATION
+android.location.LocationManager.addNmeaListener(android.location.OnNmeaMessageListener,android.os.Handler)boolean :: android.permission.ACCESS_FINE_LOCATION
 android.location.LocationManager.registerGnssMeasurementsCallback(android.location.GnssMeasurementsEvent$Callback)boolean :: android.permission.ACCESS_FINE_LOCATION
-android.location.LocationManager.registerGnssMeasurementsCallback(android.location.GnssMeasurementsEvent$Callback,android.location.Handler)boolean :: android.permission.ACCESS_FINE_LOCATION
-android.location.LocationManager.registerGnssNavigationMessageCallback(android.location.GnssNavigationMessageEvent$Callback,android.location.Handler)boolean :: android.permission.ACCESS_FINE_LOCATION
-android.location.LocationManager.registerGnssNavigationMessageCallback(android.location.GnssNavigationMessage$Callback,android.location.Handler)boolean :: android.permission.ACCESS_FINE_LOCATION
+android.location.LocationManager.registerGnssMeasurementsCallback(android.location.GnssMeasurementsEvent$Callback,android.os.Handler)boolean :: android.permission.ACCESS_FINE_LOCATION
+android.location.LocationManager.registerGnssNavigationMessageCallback(android.location.GnssNavigationMessageEvent$Callback,android.os.Handler)boolean :: android.permission.ACCESS_FINE_LOCATION
+android.location.LocationManager.registerGnssNavigationMessageCallback(android.location.GnssNavigationMessage$Callback,android.os.Handler)boolean :: android.permission.ACCESS_FINE_LOCATION
 android.location.LocationManager.getGpsStatus(android.location.GpsStatus)android.location.GpsStatus :: android.permission.ACCESS_FINE_LOCATION
 android.media.tv.TvView.unblockContent(android.media.tv.TvContentRating)void :: android.permission.MODIFY_PARENTAL_CONTROLS
 android.media.tv.TvInputManager.setParentalControlsEnabled(boolean)void :: android.permission.MODIFY_PARENTAL_CONTROLS
